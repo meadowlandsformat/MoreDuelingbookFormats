@@ -1,0 +1,23 @@
+{
+	"name": "Mode Duelingbook Formats",
+	"manifest_version": 3,
+	"version": "1.0",
+	"description": "Adds extra Formats to Duelingbook",
+	"permissions": [
+		"tabs",
+		"storage",
+		"scripting",
+		"webNavigation"
+	],
+	"action":
+	{
+		"default_title": "Settings",
+		"default_icon": "icon.png",
+		"default_popup": "onextensionpressed.html"
+	},
+	"host_permissions": ["*://*.duelingbook.com/"],
+	"background":
+	{
+		"service_worker": "background.js"
+	}
+}

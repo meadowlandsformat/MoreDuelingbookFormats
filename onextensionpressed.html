@@ -1,0 +1,182 @@
+<html>
+<head>
+	 <!-- <link rel="stylesheet" href="third-party/jquery-ui.css">
+	  <link rel="stylesheet" href="third-party/jquery-ui.structure.css">
+	  <link rel="stylesheet" href="third-party/jquery-ui.theme.css">
+	  <link rel="stylesheet" href="popup.css">
+	  <script src="third-party/jquery-1.12.4.js"></script>
+	  <script src="third-party/jquery-ui-1.12.1.js"></script> -->
+	  
+    <style>
+		.switch {
+		  position: relative;
+		  display: inline-block;
+		  width: 60px;
+		  height: 34px;
+		}
+
+		/* Hide default HTML checkbox */
+		.switch input {
+		  opacity: 0;
+		  width: 0;
+		  height: 0;
+		}
+
+		/* The slider */
+		.slider {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #ccc;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		.slider:before {
+		  position: absolute;
+		  content: "";
+		  height: 26px;
+		  width: 26px;
+		  left: 4px;
+		  bottom: 4px;
+		  background-color: white;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+
+		input:checked + .slider {
+		  background-color: #2196F3;
+		}
+
+		input:focus + .slider {
+		  box-shadow: 0 0 1px #2196F3;
+		}
+
+		input:checked + .slider:before {
+		  -webkit-transform: translateX(26px);
+		  -ms-transform: translateX(26px);
+		  transform: translateX(26px);
+		}
+
+		/* Rounded sliders */
+		.slider.round {
+		  border-radius: 34px;
+		}
+
+		.slider.round:before {
+		  border-radius: 50%;
+		}
+    </style>
+</head>
+<body style="width: 250px">
+   <center>
+		<h1>Unlock Card Mechanics</h1>
+		
+		<label class="switch">
+		  <input type="checkbox" id="unlockCardMechanics">
+		  <span class="slider round"></span>
+		</label>
+		
+        <h1>Pot of Greed Sound</h1>
+		
+		<label class="switch">
+		  <input type="checkbox" id="potOfSwitch">
+		  <span class="slider round"></span>
+		</label>
+		
+        <h1>No Female Cards</h1>
+		
+		<label class="switch">
+		  <input type="checkbox" id="femOfSwitch">
+		  <span class="slider round"></span>
+		</label>
+		
+        <h1>Card Logging</h1>
+		
+		<label class="switch">
+		  <input type="checkbox" id="cardLogging">
+		  <span class="slider round"></span>
+		</label>
+		
+        <h1>Master Duel Sounds</h1>
+		
+		<label class="switch">
+		  <input type="checkbox" id="limitedCardsSound">
+		  <span class="slider round"></span>
+		</label>
+		
+		
+		<h2>Volume</h2>
+		<label>
+			<input type="range" min="0" max="100" value="0" id="musicSliderMD">
+		</label>
+		
+        <h1>Random Nibiru Paper Scissors</h1>
+		
+		<label class="switch">
+		  <input type="checkbox" id="randomRPS">
+		  <span class="slider round"></span>
+		</label>
+		
+		<h1>Duel Links Music</h1>
+		
+		<h2>Normal Music</h2>
+		
+		<label class="switch">
+			<select name="Music" id="normalMusicDL">
+			<option value="victoryMusic">Under 3000 LP Music</option>
+			<option value="profile">My Profile Music</option>
+			<optgroup label="Duel Monsters">
+			</optgroup>
+			<optgroup label="Dark Side of Dimensions">
+			<option value="kaibaDSOD">Seto Kaiba</option>
+			</optgroup>
+			<optgroup label="Generation X">
+			<option value="alexisGX">Alexis Rhodes</option>
+			<option value="jadenGX">Jaden Yuki</option>
+			</optgroup>
+			<optgroup label="Stairway to Destined (Gameboy)">
+			<option value="kaibaSTD">Kaiba</option>
+			</optgroup>
+			</select>
+		</label>
+		<h2>Under 3000 LP Music</h2>
+		
+		<label class="switch">
+			<select name="Ace Monster / Victory Music / Losing Music" id="victoryMusicDL">
+			<option value="normalMusic">Normal Music</option>
+			<option value="profile">My Profile Music</option>
+			<optgroup label="Duel Monsters">
+			<option value="DMGX">DM / GX</option>
+			</optgroup>
+			<optgroup label="Dark Side of Dimensions">
+			<option value="DSOD">DSOD</option>
+			</optgroup>
+			<optgroup label="5 Dragons">
+			<option value="5Ds">5Ds</option>
+			</optgroup>
+			<optgroup label="ZEXAL">
+			<option value="ZEXAL">Zexal</option>
+			<option value="kiteAceZEXAL">Kite / Shark (Ace)</option>
+			</optgroup>
+			<optgroup label="Arc-V">
+			<option value="ArcV">Arc-V</option>
+			</optgroup>
+			<optgroup label="Stairway to Destined (Gameboy)">
+			<option value="kaibaSTD">Kaiba</option>
+			</optgroup>
+			</select>
+		</label>
+		<h2>Volume</h2>
+		<label>
+			<input type="range" min="0" max="100" value="0" id="musicSliderDL">
+		</label>
+		<!-- <br>
+		<label id="consoleLog">Ignore This Message</label> -->
+		
+</body>
+  <script src="onextensionpressed.js"></script>
+</html>
